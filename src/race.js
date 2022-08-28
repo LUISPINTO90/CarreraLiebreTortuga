@@ -43,10 +43,19 @@ export default class Race {
       (this.hare.getPosition() < 100 && this.turtle.getPosition() < 100)
     );
 
+    //  DETERMINAR GANADOR
     if (this.hare.getPosition() < this.turtle.getPosition()) {
-      console.log("\nLa Tortuga ha ganado");
+      if (this.hare.getPosition() >= 100 && this.turtle.getPosition() >= 100) {
+        console.log("\nEMPATE");
+      } else {
+        console.log("\nLa Tortuga ha ganado");
+      }
     } else if (this.turtle.getPosition() < this.hare.getPosition()) {
-      console.log("\nLa Liebre ha ganado");
+      if (this.turtle.getPosition() >= 100 && this.hare.getPosition() >= 100) {
+        console.log("EMPATE");
+      } else {
+        console.log("\nLa Liebre ha ganado");
+      }
     } else {
       console.log("\nEMPATE");
     }
